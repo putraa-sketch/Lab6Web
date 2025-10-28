@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Praktikum 6</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0 80px;
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #667eea;
+        }
+        .profile-img {
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 0;
+        }
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            background: white;
+            color: #667eea;
+            margin: 0 5px;
+            transition: all 0.3s;
+        }
+        .social-links a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">MyPortfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tentang">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="form.html">Form</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontak">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3">Halo, Saya Abdi Putra Perdana</h1>
+            <p class="lead fs-4">Web Developer | Designer | Student</p>
+            <a href="#tentang" class="btn btn-light btn-lg mt-3">Kenali Saya</a>
+        </div>
+    </section>
+
+    <!-- Section: Tentang Saya -->
+    <section id="tentang" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Tentang Saya</h2>
+            
+            <div class="row align-items-center">
+                <!-- Kolom Kiri: Foto (4 kolom) -->
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="Foto Formal.jpg" 
+                         alt="Foto Profil" 
+                         class="img-fluid profile-img">
+                </div>
+                
+                <!-- Kolom Kanan: Deskripsi (8 kolom) -->
+                <div class="col-md-8">
+                    <h3 class="mb-3">Halo! Saya Abdi Putra Perdana</h3>
+                    <p class="text-muted mb-4">
+                        Saya adalah mahasiswa Pemrograman Web yang sedang belajar mengembangkan 
+                        website modern menggunakan berbagai teknologi. Saat ini saya fokus 
+                        mempelajari HTML, CSS, JavaScript, dan framework seperti Bootstrap.
+                    </p>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><strong>🎓 Pendidikan:</strong> Universitas Pelita Bangsa</li>
+                                <li class="mb-2"><strong>📍 Lokasi:</strong> Cikarang, Indonesia</li>
+                                <li class="mb-2"><strong>📧 Email:</strong> abdiputraperdana@gmail.com</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><strong>💼 Status:</strong> Mahasiswa</li>
+                                <li class="mb-2"><strong>🌐 Website:</strong> www.contoh.com</li>
+                                <li class="mb-2"><strong>📱 Phone:</strong> +62 123-3456-7890</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h5 class="mb-3">Keahlian:</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-primary p-2">HTML5</span>
+                        <span class="badge bg-primary p-2">CSS3</span>
+                        <span class="badge bg-primary p-2">JavaScript</span>
+                        <span class="badge bg-primary p-2">Bootstrap</span>
+                        <span class="badge bg-success p-2">PHP</span>
+                        <span class="badge bg-success p-2">MySQL</span>
+                        <span class="badge bg-warning p-2">Git</span>
+                        <span class="badge bg-warning p-2">Responsive Design</span>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="#portfolio" class="btn btn-primary me-2">Lihat Portfolio</a>
+                        <a href="#kontak" class="btn btn-outline-primary">Hubungi Saya</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Portfolio Saya -->
+    <section id="portfolio" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Portfolio Saya</h2>
+            <p class="text-center text-muted mb-5">Berikut adalah beberapa proyek yang telah saya kerjakan</p>
+            
+            <!-- 3 Kolom Card (col-md-4) -->
+            <div class="row">
+                
+                <!-- Card Proyek 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow">
+                        <img src="https://via.placeholder.com/400x250/667eea/ffffff?text=Proyek+1" 
+                             class="card-img-top" 
+                             alt="Proyek 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Website Company Profile</h5>
+                            <p class="card-text">
+                                Membuat website company profile untuk perusahaan startup dengan 
+                                desain modern dan responsive menggunakan Bootstrap.
+                            </p>
+                            <div class="mb-3">
+                                <span class="badge bg-info text-dark">HTML</span>
+                                <span class="badge bg-info text-dark">CSS</span>
+                                <span class="badge bg-info text-dark">Bootstrap</span>
+                            </div>
+                            <a href="#" class="btn btn-primary">Lihat Detail</a>
+                            <a href="#" class="btn btn-outline-secondary">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Proyek 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow">
+                        <img src="https://via.placeholder.com/400x250/764ba2/ffffff?text=Proyek+2" 
+                             class="card-img-top" 
+                             alt="Proyek 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Aplikasi To-Do List</h5>
+                            <p class="card-text">
+                                Aplikasi to-do list interaktif dengan fitur tambah, edit, dan hapus 
+                                tugas menggunakan JavaScript dan local storage.
+                            </p>
+                            <div class="mb-3">
+                                <span class="badge bg-warning text-dark">JavaScript</span>
+                                <span class="badge bg-warning text-dark">Bootstrap</span>
+                                <span class="badge bg-warning text-dark">LocalStorage</span>
+                            </div>
+                            <a href="#" class="btn btn-primary">Lihat Detail</a>
+                            <a href="#" class="btn btn-outline-secondary">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Proyek 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow">
+                        <img src="https://via.placeholder.com/400x250/f093fb/ffffff?text=Proyek+3" 
+                             class="card-img-top" 
+                             alt="Proyek 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Landing Page Produk</h5>
+                            <p class="card-text">
+                                Landing page untuk promosi produk digital dengan animasi menarik 
+                                dan call-to-action yang efektif.
+                            </p>
+                            <div class="mb-3">
+                                <span class="badge bg-success">HTML/CSS</span>
+                                <span class="badge bg-success">Animation</span>
+                                <span class="badge bg-success">Responsive</span>
+                            </div>
+                            <a href="#" class="btn btn-primary">Lihat Detail</a>
+                            <a href="#" class="btn btn-outline-secondary">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Kontak -->
+    <section id="kontak" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Hubungi Saya</h2>
+            <p class="text-center text-muted mb-5">Punya proyek atau pertanyaan? Silakan hubungi saya!</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="namaKontak" class="form-label">Nama Lengkap</label>
+                            <input type="text" class="form-control" id="namaKontak" placeholder="Nama Anda" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailKontak" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="emailKontak" placeholder="email@contoh.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subjekKontak" class="form-label">Subjek</label>
+                            <input type="text" class="form-control" id="subjekKontak" placeholder="Subjek pesan" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pesanKontak" class="form-label">Pesan</label>
+                            <textarea class="form-control" id="pesanKontak" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">Kirim Pesan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <div class="social-links mb-3">
+                <a href="#" title="GitHub">📘</a>
+                <a href="#" title="LinkedIn">💼</a>
+                <a href="#" title="Instagram">📷</a>
+                <a href="#" title="Twitter">🐦</a>
+            </div>
+            <p class="mb-0">&copy; 2025 Abdi Putra Perdana</p>
+            <p class="mb-0"><small>Praktikum 6 - Pemrograman Web</small></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
